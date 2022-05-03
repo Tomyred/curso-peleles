@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "find": "node find.js",
-    "filter": "node filter.js" 
+    "filter": "node filter.js",
+    "map": "node map.js" 
   },
   "author": "",
   "license": "ISC"
