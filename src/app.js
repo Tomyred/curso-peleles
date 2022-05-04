@@ -22,5 +22,3 @@ button.addEventListener("click", function () {
 users.forEach(function (user) {
     list.innerHTML += `<li>${user}</li>`;
 });
-
-const string = "string";

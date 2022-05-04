@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "find": "node find.js",
     "filter": "node filter.js",
-    "map": "node map.js" 
+    "map": "node map.js",
+    "ejer": "node ejercicios.js"
   },
   "author": "",
   "license": "ISC"

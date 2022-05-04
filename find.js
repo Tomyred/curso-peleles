@@ -6,6 +6,7 @@ const user = {
         console.log("Hola, soy Tomás");
     },
 };
+
 const user1 = {
     userName: "Mati",
     email: "email2@mail.com",
@@ -17,6 +18,7 @@ const user1 = {
         console.log("Hola " + nombre + ", mi nombre es Mati");
     },
 };
+
 user1.saludarAAlguienMas("Gonza");
 const user2 = {
     userName: "Juancito",
