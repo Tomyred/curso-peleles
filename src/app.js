@@ -1,24 +1,38 @@
 const title = document.querySelector("#title");
 const button = document.querySelector("#myButton");
-const input = document.querySelector("#myInput");
-const list = document.querySelector(".userList");
+const userInput = document.querySelector("#user");
+const passInput = document.querySelector("#password");
 
-const users = ["Juancito", "John Doe", "Pedro"];
-
-input.addEventListener("input", function (e) {
-    const inputText = e.target.value;
-    title.innerHTML = inputText;
-});
+const usersDB = [
+    {
+        userName: "TomRoj",
+        email: "email1@mail.com",
+        password: "123456",
+    },
+    {
+        userName: "Mati",
+        email: "email2@mail.com",
+        password: "mati123",
+    },
+];
 
 button.addEventListener("click", function () {
-    if (input.value.length === 0) {
-        return;
-    }
-    users.push(input.value);
-    list.innerHTML += `<li>${input.value}</li>`;
-    input.value = "";
-});
+    const finded = usersDB.find(function (foo) {
+        return foo.userName === userInput.value;
+    });
 
-users.forEach(function (user) {
-    list.innerHTML += `<li>${user}</li>`;
+    if (finded) {
+        alert("El usuario ya existe");
+    } else {
+        if (passInput.value.length <= 4) {
+            alert("Contraseña muy corta");
+        } else {
+            const user = {
+                userName: userInput.value,
+                password: passInput.value,
+            };
+            alert("Usuario creado");
+            usersDB.push(user);
+        }
+    }
 });

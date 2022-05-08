@@ -1,35 +1,20 @@
-const user = {
-    userName: "TomRoj",
-    email: "email1@mail.com",
-    password: "123456",
-    function() {
-        console.log("Hola, soy Tomás");
+const usersDB = [
+    {
+        userName: "TomRoj",
+        email: "email1@mail.com",
+        password: "123456",
     },
-};
-
-const user1 = {
-    userName: "Mati",
-    email: "email2@mail.com",
-    password: "mati123",
-    saludar() {
-        console.log("Hola, soy Mati");
+    {
+        userName: "Mati",
+        email: "email2@mail.com",
+        password: "mati123",
     },
-    saludarAAlguienMas(nombre) {
-        console.log("Hola " + nombre + ", mi nombre es Mati");
+    {
+        userName: "Juancito",
+        email: "email3@mail.com",
+        password: "john123",
     },
-};
-
-user1.saludarAAlguienMas("Gonza");
-const user2 = {
-    userName: "Juancito",
-    email: "email3@mail.com",
-    password: "john123",
-    function() {
-        console.log("Hola, soy Juancito");
-    },
-};
-
-const usersDB = [user, user1, user2];
+];
 
 function logIn(user, email, password) {
     const requestedUser = usersDB.find(function (dbUser) {
